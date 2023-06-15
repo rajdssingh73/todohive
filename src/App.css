@@ -2,37 +2,95 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Header */
+.header-container {
+  background-color: #66ACFA;
   color: white;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Merienda', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  font-size: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Todo */
+.container {
+  width: calc(30% * (100vw / 100));
+  margin: 0 auto;
+  height: 20vh;
+  padding: 20px;
+}
+.TodoMain { 
+  margin: 10px;
+}
+
+.TodoTop {
+  display: flex;
+  justify-content: space-around;
+  border: 0.1px solid blue;
+  box-shadow: 4px 4px 8px rgba(0, 0, 255, 0.3);
+  padding: 5px;
+  padding-bottom: 10px;
+}
+.NewTask {
+  align-items: center;
+}
+
+.inputField {
+  flex: 1;
+}
+
+.addButton {
+  height: 55px;
+  width: 80px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #92CAFF;
+  height: 80px;
+}
+.completed {
+  opacity: 0.3;
+   background-color: #FF62A5 !important;
+}
+.editableInput {
+  width: 80vw
+}
+
+
+@media (max-width: 850px) {
+  .TodoTop {
+   display: flex;
+   flex-direction: column;
+   height: 35vh;
+   align-items:center;
   }
-  to {
-    transform: rotate(360deg);
+  .paper{
+    width: 85vw !important;
   }
+
+  .addButton {
+   width: 32vw !important;
+  }
+  .inputField {
+    width: 55vw !important;
+  }
+  .filterClass {
+    width: 80vw !important;
+  }
+
+  .editableInput {
+  width: 50vw
+}
 }
